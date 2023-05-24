@@ -9,16 +9,15 @@ function newImage(url, left, bottom) {
 }
 
 function newItem(url, left, bottom){
-    let tool = newImage(url, left, bottom)
-    tool.src = url
-    tool.style.position = 'fixed'
-    tool.style.left = left + 'px'
-    tool.style.bottom = bottom + 'px'
-    document.body.append(tool)
-    return tool
+    let image = newImage(url, left, bottom)
+    image.src = url
+    image.style.position = 'fixed'
+    image.style.left = left + 'px'
+    image.style.bottom = bottom + 'px'
+    document.body.append(image)
     
-    tool.addEventListener("dblclick", () => {
-        tool.remove()
+    image.addEventListener("dblclick", () => {
+        image.remove()
     })
 }
 
